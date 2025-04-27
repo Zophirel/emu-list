@@ -1,35 +1,61 @@
-@import './base.css';
+body {
+  font-family: sans-serif;
+  margin: 0;
+  
+  background-color: #f4f4f4;
+}
 
+.light, .dark {
+  padding: 20px;
+  height: 100vh;
+  overflow: scroll;
+}
 #app {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
 }
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+.search-bar {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
 }
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+.lobby-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
 }
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+.lobby-tile {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.lobby-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.lobby-description {
+  color: #555;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.lock-icon {
+  margin-right: 5px;
+  color: #888;
+}
+.players-count {
+  font-size: 0.9em;
+  color: #777;
+}
+.no-lobbies {
+  text-align: center;
+  color: #777;
 }
